@@ -142,7 +142,9 @@ a:hover {
   text-decoration: none;
 }
 
-ul li {
+ul,
+ol,
+li {
   list-style: none;
 }
 
@@ -750,6 +752,98 @@ body._lock {
   display: none;
 }
 
+.all-pages {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 26.5625rem;
+  height: 100vh;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.all-pages__container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background-color: #f1ddc9;
+  padding: 2.5rem;
+  height: 100%;
+  min-height: 26.5625rem;
+}
+
+.all-pages__title:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.menu-all-pages__label {
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-all-pages__label:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.menu-all-pages__list {
+  counter-reset: ol-numbers;
+}
+
+.menu-all-pages__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.menu-all-pages__item::before {
+  counter-increment: ol-numbers;
+  content: counter(ol-numbers) ".";
+  color: #333;
+}
+
+.menu-all-pages__link {
+  position: relative;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.menu-all-pages__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.125rem;
+  background-color: #d84727;
+  -webkit-transition: 0.3s ease 0s;
+  -o-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+}
+
+.decor-all-pages__icon {
+  position: absolute;
+}
+
+.decor-all-pages__icon_1 {
+  top: 1.875rem;
+  right: -3.75rem;
+}
+
+.decor-all-pages__icon_2 {
+  top: 4.375rem;
+  right: -3.125rem;
+}
+
+.decor-all-pages__icon_3 {
+  top: 6.875rem;
+  right: -2.5rem;
+}
+
 .page__main {
   margin-top: 6.625rem;
   padding-top: 3.375rem;
@@ -757,6 +851,34 @@ body._lock {
 
 .main__container {
   position: relative;
+}
+
+.main__container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25rem;
+  -webkit-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  width: 100vw;
+  height: 150%;
+  background-color: #f7f6f4;
+  z-index: 10;
+}
+
+.main__container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -23.75rem;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  width: 100vw;
+  height: 150%;
+  background-color: #f7f6f4;
+  z-index: 10;
 }
 
 .main__content {
@@ -1372,6 +1494,34 @@ body._lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.testimonials__container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25rem;
+  -webkit-transform: translate(-100%, -50%);
+      -ms-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  width: 100vw;
+  height: 100%;
+  background-color: #f7f6f4;
+  z-index: 10;
+}
+
+.testimonials__container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -23.75rem;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  width: 100vw;
+  height: 100%;
+  background-color: #f7f6f4;
+  z-index: 10;
 }
 
 .testimonials__title {
@@ -3752,6 +3902,22 @@ body._lock {
     width: 8.75rem;
   }
 
+  .all-pages__container {
+    padding-top: 1.25rem;
+  }
+
+  .all-pages__container {
+    padding-bottom: 1.25rem;
+  }
+
+  .all-pages__container {
+    padding-right: 1.25rem;
+  }
+
+  .all-pages__container {
+    padding-left: 1.25rem;
+  }
+
   .page__main {
     margin-top: 1rem;
   }
@@ -4218,6 +4384,22 @@ body._lock {
 
   .search-action-header__icon span {
     font-size: calc(1.3125rem + 5 * (100vw - 30rem) / 660);
+  }
+
+  .all-pages__container {
+    padding-top: calc(1.25rem + 20 * (100vw - 20rem) / 820);
+  }
+
+  .all-pages__container {
+    padding-bottom: calc(1.25rem + 20 * (100vw - 20rem) / 820);
+  }
+
+  .all-pages__container {
+    padding-right: calc(1.25rem + 20 * (100vw - 20rem) / 820);
+  }
+
+  .all-pages__container {
+    padding-left: calc(1.25rem + 20 * (100vw - 20rem) / 820);
   }
 
   .page__main {
@@ -6946,5 +7128,11 @@ body._lock {
         -ms-flex-align: start;
             align-items: start;
     gap: 0rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .menu-all-pages__link:hover::before {
+    width: 100%;
   }
 }
