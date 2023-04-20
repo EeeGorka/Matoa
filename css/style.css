@@ -783,6 +783,11 @@ body._lock {
   margin-bottom: 0.9375rem;
 }
 
+.all-pages__menu {
+  position: relative;
+  z-index: 1;
+}
+
 .menu-all-pages__label {
   color: #333;
   font-weight: 500;
